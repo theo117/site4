@@ -1,0 +1,132 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+}
+
+#__nuxt .app,
+#app,
+.app {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Static-export fallback for elements whose reveal animation was captured hidden. */
+[style*="opacity: 0"][style*="visibility: hidden"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  outline-offset: 0.18rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #8c4e39 !important;
+  outline-offset: 0.18rem;
+}
+
+.site-skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2147483647;
+  padding: 0.65rem 0.85rem;
+  background: #1e1d20;
+  color: #e9e7e2;
+  font-size: 14px;
+  line-height: 1;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+}
+
+.site-skip-link:focus {
+  transform: translateY(0);
+}
+
+.header {
+  backdrop-filter: saturate(120%);
+}
+
+.navbar__link,
+.footer__col-link,
+.socials__link,
+.stories-list-item,
+.product-list-item,
+.project-list-item {
+  transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) {
+  .stories-list-item:hover,
+  .product-list-item:hover,
+  .project-list-item:hover {
+    transform: translateY(-0.15rem);
+  }
+
+  .footer__col-link:hover,
+  .socials__link:hover,
+  .navbar__link:hover {
+    color: #8c4e39;
+  }
+}
+
+img {
+  background-color: #d8d5cd;
+}
+
+img[loading="lazy"] {
+  content-visibility: auto;
+}
+
+.footer__col-nl {
+  gap: 0.5rem;
+}
+
+.footer__col-nl input {
+  min-height: 2.5rem;
+}
+
+.footer__col-nl button,
+.cta__link--button,
+.form[data-form-theme="default"] .field--submit button {
+  min-height: 2.75rem;
+}
+
+@media screen and (max-width: 47.99em) {
+  .header__inner {
+    min-height: 3rem;
+  }
+
+  .navbar__list,
+  .footer__navbar .navbar__list {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+
+  .footer__wrapper {
+    row-gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
